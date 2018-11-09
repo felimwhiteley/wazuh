@@ -242,5 +242,14 @@ ID: 80200 - 80499
         <description>AWS Trusted Advisor - Status: $(aws.status) [$(aws.check-name)] [$(aws.uuid)]</description>
         <group>aws_trusted_advisor, aws_trusted_advisor_ok,</group>
     </rule>
+
+    <!-- AWS KMS (Key Management Service) -->
+    <!-- Documentation: https://docs.aws.amazon.com/kms/latest/developerguide/overview.html -->
+    <rule id="80490" level="3">
+        <decoded_as>json</decoded_as>
+        <field name="aws.source">kms</field>
+        <description>AWS KMS</description>
+        <group>aws_kms,</group>
+    </rule>
   
 </group>
